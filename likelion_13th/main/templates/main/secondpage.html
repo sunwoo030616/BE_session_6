@@ -3,6 +3,11 @@
     <h1 class="contents">2025 멋쟁이사자처럼 13기</h1>
     <div class="contents">This is "Second Page"</div>
     <div>
+        <div>
+            {% if user.is_authenticated %}
+            <a href="{% url 'main:new-blog' %}">새 글 작성하기</a>
+            {% endif %}
+        </div>
         {% for blog in blogs %}
         <div>
             <hr/>

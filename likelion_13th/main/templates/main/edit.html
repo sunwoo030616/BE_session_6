@@ -6,7 +6,7 @@
 {% csrf_token %}
 <p>제목: <input type="text" name="title" value="{{blog.title}}"></p>
 <p>작성자: <input type="text" name="writer" value="{{blog.writer}}"></p>
-{% if blog.image % }
+{% if blog.image %}
     <p><img src="{{ blog.image.url }}" alt="사진" width="100px"></p>
 {% endif %}
 <p>사진: <input type="file" name="image"></p>
