@@ -32,11 +32,11 @@ def signup(request):
                 username=request.POST['username'],
                 password=request.POST['password']
             )
-            nickname=request.POST['nickname']
-            major=request.POST['major']
+            # nickname=request.POST['nickname']
+            # major=request.POST['major']
 
-            profile=Profile(user=user, nickname=nickname, major=major)
-            profile.save()
+            # profile=Profile(user=user, nickname=nickname, major=major)
+            # profile.save()
 
             auth.login(request, user)
             return redirect('/')
